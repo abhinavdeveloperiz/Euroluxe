@@ -1,0 +1,83 @@
+
+video.bg-video {
+    position: fixed;       /* stay fixed while scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw;          /* full width */
+    height: 100vh;         /* full height */
+    object-fit: cover;     /* crop to fit without distortion */
+    z-index: -1;           /* send behind everything */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent side scroll (white gaps left/right) */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.image {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery-image {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-image {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #ffffff, #9ca3af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-morphism {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* testiminials */
+
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #facc15, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

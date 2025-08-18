@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- aos animation  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- fondawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- google fonts  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- restrict zoom in and zoom out  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- aos animation  -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- fevicon  -->
+    <!-- Favicon for Android -->
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'images/logo1.png' %}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{% static 'images/logo1.png' %}">
+
+    <!-- Apple iOS icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/logo1.png' %}">
+
+    <!-- Windows tile -->
+    <meta name="msapplication-TileImage" content="{% static 'images/logo1.png' %}">
+    <meta name="msapplication-TileColor" content="#000000">
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#000000">
+
+
+
+    <title>Euroluxe</title>
+</head>
+
+
+<style>
+    html,
+    body {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Cormorant Garamond', serif;
+        letter-spacing: 2px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    /* Paragraph Text */
+    p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        line-height: 1.8;
+    }
+</style>
+
+
+<body>
+    <!-- Navbar -->
+    <nav class="bg-white/70 text-black shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-6 py-8 flex items-center justify-between">
+
+            <!-- Left Menu -->
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="/" class="hover:text-gray-500 transition duration-300">Home</a></li>
+                <li><a href="{% url 'about' %}" class="hover:text-gray-500 transition duration-300">About Us</a></li>
+                <li><a href="{% url 'products' %}" class="hover:text-gray-500 transition duration-300">Products</a></li>
+
+            </ul>
+
+            <!-- Logo (centered) -->
+            <a href="/" class="flex items-center h-16 absolute left-1/2 transform -translate-x-1/2">
+                <img src="{% static 'images/logo.png' %}" alt="logo" class="h-20 w-auto object-contain" />
+            </a>
+
+            <!-- Right Menu -->
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="#" class="hover:text-gray-500 transition duration-300">Exploration</a></li>
+                <li><a href="#" class="hover:text-gray-500 transition duration-300">Contact Us</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none ml-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <ul class="flex flex-col items-center py-4 space-y-4 font-medium">
+                <li><a href="/" class="hover:text-indigo-500 transition duration-300">Home</a></li>
+                <li><a href="{% url 'about' %}" class="hover:text-indigo-500 transition duration-300">About Us</a></li>
+                <li><a href="{% url 'products' %}" class="hover:text-indigo-500 transition duration-300">Products</a>
+                </li>
+                <li><a href="#" class="hover:text-indigo-500 transition duration-300">Exploration</a></li>
+                <li><a href="#" class="hover:text-indigo-500 transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    {% block content %}
+    {% endblock %}
+    <!-- Footer -->
+    <footer class="bg-black text-white relative overflow-hidden">
+        <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+            <!-- Brand Info -->
+            <div class="space-y-4">
+                <h2 class="text-3xl font-extrabold tracking-wide">EUROLUXE</h2>
+                <p class="text-gray-200 leading-relaxed">
+                    Crafting exceptional spirits with heritage, passion, and innovation.
+                    Celebrate every moment with timeless blends.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="/" class="hover:text-yellow-400 transition">Home</a></li>
+                    <li><a href="{% url 'about' %}" class="hover:text-yellow-400 transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition">Our Collection</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Get In Touch</h3>
+                <ul class="space-y-3 text-gray-200">
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-map-marker-alt "></i>
+                        <span>123 Heritage Street, London</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-phone-alt "></i>
+                        <span>+44 123 456 789</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-envelope "></i>
+                        <span>info@brandname.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-yellow-400 hover:text-black transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-yellow-400 hover:text-black transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-yellow-400 hover:text-black transition">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-yellow-400 hover:text-black transition">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="bg-black text-center py-5 border-t border-gray-800 text-gray-400">
+            © 2025 <span class="text-white font-bold">EUROLUXE</span>. All Rights Reserved. | Crafted with Passion 🥂
+        </div>
+
+        <div class="bg-black text-center py-4 text-gray-400">
+            <span>Designed and Developed by </span>
+            <a href="https://www.inspirezesttechnologies.com/" target="_blank" class="font-semibold text-white transition-all duration-500 
+          hover:bg-gradient-to-r hover:to-blue-500 hover:from-violet-500 
+          hover:bg-clip-text hover:text-transparent">
+                InspireZest Technologies Pvt Ltd
+            </a>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // animation speed in ms
+            once: true,    // animate only once
+            easing: 'ease-in-out'
+
+        });
+    </script>
+
+
+    <!-- Script for Mobile Menu -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('animate__fadeInDown');
+        });
+    </script>
+
+    <!-- smooth scroll  -->
+    <script>
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add parallax effect to particles
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const particles = document.querySelectorAll('.particle');
+
+            particles.forEach((particle, index) => {
+                const speed = 0.5 + (index * 0.1);
+                particle.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
