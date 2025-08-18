@@ -14,3 +14,7 @@ from django.views.decorators.cache import cache_page
 
 def About(request):
     return render(request,'about.html')
+
+
+def Contact(request):
+    return render(request,'contact.html')

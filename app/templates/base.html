@@ -76,7 +76,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="bg-white/70 text-black shadow-lg fixed w-full z-50 top-0">
+    <nav class="bg-white/90 text-black shadow-lg fixed w-full z-50 top-0">
         <div class="container mx-auto px-6 py-8 flex items-center justify-between">
 
             <!-- Left Menu -->
@@ -93,9 +93,9 @@
             </a>
 
             <!-- Right Menu -->
-            <ul class="hidden md:flex space-x-8 font-medium">
+            <ul class="hidden md:flex space-x-8 font-medium items-start">
                 <li><a href="#" class="hover:text-gray-500 transition duration-300">Exploration</a></li>
-                <li><a href="#" class="hover:text-gray-500 transition duration-300">Contact Us</a></li>
+                <li><a href="{% url 'contact' %}" class="hover:text-gray-500 transition duration-300">Contact Us</a></li>
             </ul>
 
             <!-- Mobile Menu Button -->
@@ -108,14 +108,14 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
-            <ul class="flex flex-col items-center py-4 space-y-4 font-medium">
-                <li><a href="/" class="hover:text-indigo-500 transition duration-300">Home</a></li>
+        <div id="mobile-menu" class="hidden md:hidden bg-black text-white shadow-lg">
+            <ul class="flex flex-col items-center py-4 space-y-4 font-medium ">
+                <li><a href="/" class="hover:text-indigo-500 transition duration-30">Home</a></li>
                 <li><a href="{% url 'about' %}" class="hover:text-indigo-500 transition duration-300">About Us</a></li>
                 <li><a href="{% url 'products' %}" class="hover:text-indigo-500 transition duration-300">Products</a>
                 </li>
-                <li><a href="#" class="hover:text-indigo-500 transition duration-300">Exploration</a></li>
-                <li><a href="#" class="hover:text-indigo-500 transition duration-300">Contact Us</a></li>
+                <li><a href="" class="hover:text-indigo-500 transition duration-300">Exploration</a></li>
+                <li><a href="{% url 'contact' %}" class="hover:text-indigo-500 transition duration-300">Contact Us</a></li>
             </ul>
         </div>
     </nav>
