@@ -5,24 +5,28 @@
 <body class="bg-black text-white font-sans overflow-x-hidden">
 
     <!-- HERO SECTION -->
-    <section class="relative h-[70vh] flex items-center justify-center text-center overflow-hidden">
-        <!-- Fixed Background -->
-        <img src="{% static 'vodka/vodka1.png' %}" alt="About Us Banner"
-            class="fixed inset-0 w-full h-full object-cover -z-10" />
+    <!-- HERO SECTION -->
+<section class="relative h-[70vh] flex items-center justify-center text-center overflow-hidden">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline
+        class="fixed inset-0 w-full h-full object-cover -z-10">
+        <source src="{% static 'video/about-video.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-        <!-- Black Overlay -->
-        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+    <!-- Black Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-70"></div>
 
-        <!-- Content -->
-        <div class="relative z-10 max-w-3xl px-6">
-            <h1 class="text-5xl md:text-6xl font-extrabold tracking-wide mb-4 uppercase text-white">
-                About Us
-            </h1>
-            <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
-                Bold Spirits, Timeless Craftsmanship & Modern Elegance
-            </p>
-        </div>
-    </section>
+    <!-- Content -->
+    <div class="relative z-10 max-w-3xl px-6">
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-wide mb-4 uppercase text-white">
+            About Us
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+            Bold Spirits, Timeless Craftsmanship & Modern Elegance
+        </p>
+    </div>
+</section>
 
 
     <!-- OUR STORY -->
@@ -177,97 +181,78 @@
 
 
     <!-- OPERATIONS -->
-    <section class="py-20 px-6 md:px-20 bg-gradient-to-b from-white to-gray-100 text-black">
-        <div class="max-w-6xl mx-auto">
+    <section class="relative py-20 px-6 md:px-20 text-black bg-fixed bg-center bg-cover"
+        style="background-image: url('/static/images/delivery-bg.jpg');">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-white/80"></div>
+
+        <div class="relative max-w-6xl mx-auto z-10">
             <h2 class="text-4xl font-bold uppercase text-center mb-16">Delivery Process</h2>
 
-            <div class="relative border-l-4 border-gray-300 ml-6">
+            <div class="relative flex flex-col items-center space-y-12">
 
                 <!-- Step 1 -->
-                <div class="mb-12 ml-8" data-aos="fade-up">
-                    <div class="flex items-center mb-2">
-                        <div
-                            class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center shadow-lg">
-                            <!-- Order Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 3h18l-1 9H4L3 3zM4 12h16v9H4v-9z" />
-                            </svg>
-                        </div>
-                        <h3 class="ml-4 text-xl font-semibold">Order Placed</h3>
+                <div class="relative text-center" data-aos="zoom-in">
+                    <div
+                        class="w-20 h-20 mx-auto rounded-full bg-yellow-500 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-shopping-cart text-white text-2xl"></i>
                     </div>
-                    <p class="text-gray-700 ml-16">Client confirms order with <span class="font-bold">40%
-                            advance</span>.</p>
+                    <h3 class="mt-4 text-xl font-semibold">Order Placed</h3>
+                    <p class="text-gray-700 max-w-md mx-auto">Client confirms order with <b>40% advance</b>.</p>
+                    <div class="mt-6">
+                        <i class="fas fa-arrow-down text-gray-400 text-2xl"></i>
+                    </div>
                 </div>
 
                 <!-- Step 2 -->
-                <div class="mb-12 ml-8" data-aos="fade-up">
-                    <div class="flex items-center mb-2">
-                        <div
-                            class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center shadow-lg">
-                            <!-- Factory Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 21V9l9-6 9 6v12H3z" />
-                            </svg>
-                        </div>
-                        <h3 class="ml-4 text-xl font-semibold">Production & Bottling</h3>
+                <div class="relative text-center" data-aos="zoom-in">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-blue-500 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-industry text-white text-2xl"></i>
                     </div>
-                    <p class="text-gray-700 ml-16">Distillation at <b>Amsterdam (Rum)</b>, <b>Greece (Vodka)</b>,
-                        <b>Scotland (Whisky)</b> within 45 days.</p>
+                    <h3 class="mt-4 text-xl font-semibold">Production & Bottling</h3>
+                    <p class="text-gray-700 max-w-md mx-auto">Distillation at <b>Amsterdam (Rum)</b>, <b>Greece
+                            (Vodka)</b>, <b>Scotland (Whisky)</b> within 45 days.</p>
+                    <div class="mt-6">
+                        <i class="fas fa-arrow-down text-gray-400 text-2xl"></i>
+                    </div>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="mb-12 ml-8" data-aos="fade-up">
-                    <div class="flex items-center mb-2">
-                        <div
-                            class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center shadow-lg">
-                            <!-- Truck Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 13h2l1-4h13l1 4h2m-2 5a2 2 0 11-4 0 2 2 0 014 0zm-10 0a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
-                        </div>
-                        <h3 class="ml-4 text-xl font-semibold">Shipment</h3>
+                <div class="relative text-center" data-aos="zoom-in">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-green-500 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-truck-moving text-white text-2xl"></i>
                     </div>
-                    <p class="text-gray-700 ml-16">Goods palletized and handed to <b>freight forwarding partner</b>.</p>
+                    <h3 class="mt-4 text-xl font-semibold">Shipment</h3>
+                    <p class="text-gray-700 max-w-md mx-auto">Goods palletized and handed to <b>freight forwarding
+                            partner</b>.</p>
+                    <div class="mt-6">
+                        <i class="fas fa-arrow-down text-gray-400 text-2xl"></i>
+                    </div>
                 </div>
 
                 <!-- Step 4 -->
-                <div class="mb-12 ml-8" data-aos="fade-up">
-                    <div class="flex items-center mb-2">
-                        <div
-                            class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center shadow-lg">
-                            <!-- Document Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12h6m-6 4h6m-6-8h6M5 7h14V5a2 2 0 00-2-2H7a2 2 0 00-2 2v2z" />
-                            </svg>
-                        </div>
-                        <h3 class="ml-4 text-xl font-semibold">Customs Clearance</h3>
+                <div class="relative text-center" data-aos="zoom-in">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-red-500 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-file-contract text-white text-2xl"></i>
                     </div>
-                    <p class="text-gray-700 ml-16">All <b>regulatory docs, import duties & VAT</b> handled smoothly.</p>
+                    <h3 class="mt-4 text-xl font-semibold">Customs Clearance</h3>
+                    <p class="text-gray-700 max-w-md mx-auto">All <b>regulatory docs, import duties & VAT</b> handled
+                        smoothly.</p>
+                    <div class="mt-6">
+                        <i class="fas fa-arrow-down text-gray-400 text-2xl"></i>
+                    </div>
                 </div>
 
                 <!-- Step 5 -->
-                <div class="ml-8" data-aos="fade-up">
-                    <div class="flex items-center mb-2">
-                        <div
-                            class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center shadow-lg">
-                            <!-- Delivery Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 21h6a2 2 0 002-2v-5H7v5a2 2 0 002 2zM7 10h10V7a2 2 0 00-2-2H9a2 2 0 00-2 2v3z" />
-                            </svg>
-                        </div>
-                        <h3 class="ml-4 text-xl font-semibold">Final Delivery</h3>
+                <div class="relative text-center" data-aos="zoom-in">
+                    <div
+                        class="w-20 h-20 mx-auto rounded-full bg-purple-500 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-box-open text-white text-2xl"></i>
                     </div>
-                    <p class="text-gray-700 ml-16">Within <b>60 days</b>, your order is ready for distribution.</p>
+                    <h3 class="mt-4 text-xl font-semibold">Final Delivery</h3>
+                    <p class="text-gray-700 max-w-md mx-auto">Within <b>60 days</b>, your order is ready for
+                        distribution.</p>
                 </div>
 
             </div>
@@ -275,5 +260,11 @@
     </section>
 
 
+
+
+
 </body>
+
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
 {% endblock %}
