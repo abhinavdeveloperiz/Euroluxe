@@ -16,7 +16,7 @@
         <!-- Background Video -->
         <video autoplay loop muted playsinline
             class="absolute inset-0 w-full h-full object-cover md:object-cover sm:object-contain">
-            <source src="{% static 'video/banner.mp4' %}" type="video/mp4">
+            <source src="{{data.banner_video.url}}" type="video/mp4">
         </video>
 
         <!-- Overlay -->
@@ -61,12 +61,12 @@
             class="bg-gray-900 p-8 rounded-2xl hover:scale-105 transition-all duration-500 group glass-morphism h-full flex flex-col"
             data-aos="fade-up" data-aos-delay="100">
             <div class="relative overflow-hidden rounded-xl mb-6">
-                <img src="{% static 'whisky/whisky1.png' %}"
+                <img src="{{data.product1_image.url}}"
                     class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
                     alt="Premium Whiskey">
                 <video autoplay loop muted playsinline
                     class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <source src="{% static 'video/whisky.mp4' %}" type="video/mp4">
+                    <source src="{{data.product1_video.url}}" type="video/mp4">
                 </video>
             </div>
             <h3 class="text-2xl font-bold text-white mb-3">Premium Whiskey</h3>
@@ -80,12 +80,12 @@
             class="bg-gray-900 p-8 rounded-2xl hover:scale-105 transition-all duration-500 group glass-morphism h-full flex flex-col"
             data-aos="fade-up" data-aos-delay="200">
             <div class="relative overflow-hidden rounded-xl mb-6">
-                <img src="{% static 'rum/rum2.png' %}"
+                <img src="{{data.product2_image.url}}"
                     class="w-full  object-cover transition-opacity duration-500 group-hover:opacity-0"
                     style="height: 560px;" alt="White Rum">
                 <video autoplay loop muted playsinline
                     class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <source src="{% static 'video/rum.mp4' %}" type="video/mp4">
+                    <source src="{{data.product2_video.url}}" type="video/mp4">
                 </video>
             </div>
             <h3 class="text-2xl font-bold text-white mb-3">White Rum</h3>
@@ -98,12 +98,12 @@
             class="bg-gray-900 p-8 rounded-2xl hover:scale-105 transition-all duration-500 group glass-morphism h-full flex flex-col"
             data-aos="fade-up" data-aos-delay="300">
             <div class="relative overflow-hidden rounded-xl mb-6">
-                <img src="{% static 'vodka/vodka2.png' %}"
+                <img src="{{data.product3_image.url}}"
                     class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
                     alt="Vodka">
                 <video autoplay loop muted playsinline
                     class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <source src="{% static 'video/vodka.mp4' %}" type="video/mp4">
+                    <source src="{{data.product3_video.url}}" type="video/mp4">
                 </video>
             </div>
             <h3 class="text-2xl font-bold text-white mb-3">Vodka</h3>
